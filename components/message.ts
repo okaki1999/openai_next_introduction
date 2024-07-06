@@ -1,10 +1,9 @@
 'use client'
-
 import { useState } from 'react';
 import { useChat } from 'ai/react';
 import { Message } from 'ai/react';
 
-export default function Home() {
+export default function MessageSubmit() {
   const prompt = `
   あなたは恋愛のスペシャリストです。
   送られてくる情報をもとに異性にマッチングアプリの紹介文を考えてください。
