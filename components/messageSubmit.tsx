@@ -4,10 +4,7 @@ import { useChat } from 'ai/react';
 import { Message } from 'ai/react';
 
 export default function MessageSubmit() {
-  const prompt = `
-  あなたは恋愛のスペシャリストです。
-  送られてくる情報をもとに異性にマッチングアプリの紹介文を考えてください。
-  `;
+  const prompt = ``;
 
   const initialMessages: Message[] = [
     { id: 'initial-1', role: 'system', content: prompt }
@@ -30,7 +27,6 @@ export default function MessageSubmit() {
     const combinedInput = `あなたは恋愛のスペシャリストです。
     下記の情報をもとに異性に好まれるようなマッチングアプリの紹介文を考えてください。
     また各項目ごとに改行してください。
-    初めまして！名前は${name}です。, 
     仕事:文字数200文字 ${job},
     休日：${holiday}をもとに200文字程度の文章,
     趣味：${hobby}をもとに200文字程度の文章,
@@ -103,6 +99,9 @@ export default function MessageSubmit() {
           <div id="chatArea" className="mb-4 h-96 overflow-auto border p-4">
             {messages.map(message => (
               <div key={message.id} className='text-black'>
+                <h1>初めまして！</h1>
+                <h1>{name}と申します！</h1>
+                <h1>プロフィールを見ていただいて嬉しいです。</h1>
                 {message.role === 'assistant' ? (
                   <div><span>AI: {message.content}</span></div>
                 ) : (
