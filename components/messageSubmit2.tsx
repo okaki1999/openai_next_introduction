@@ -5,7 +5,7 @@ import { Message } from 'ai/react';
 
 export default function Home() {
   const prompt = `
-  関西弁で話してください。
+  恋愛のスペシャリストです。
   `;
 
   const initialMessages: Message[] = [
