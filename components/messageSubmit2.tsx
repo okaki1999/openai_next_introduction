@@ -12,7 +12,6 @@ export default function Home() {
     { id: 'initial-1', role: 'system', content: prompt}
   ];
 
-
   const { messages, input, handleSubmit,setInput } = useChat({
     api: '/api/chat-gpt-api',
     initialMessages: initialMessages // useChatフックに初期メッセージをす
