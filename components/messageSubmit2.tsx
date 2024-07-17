@@ -5,7 +5,7 @@ import { Message } from 'ai/react';
 
 export default function Home() {
   const prompt = `
-  恋愛のスペシャリストです。
+  あなたは恋愛のスペシャリストです。
   `;
 
   const initialMessages: Message[] = [
